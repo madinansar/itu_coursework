@@ -12,16 +12,16 @@ Models were trained sequentially using the F1-Macro score. To address significan
 
 ## Main Pipeline
 
-![Main pipeline](./pipeline.png)
+![Main pipeline](pipeline.png)
 ## Results
 
 ### Standard Stratified 5-Fold Results
 
-![Standard Stratified 5-Fold Results](./stratified_result.png)
+![Standard Stratified 5-Fold Results](stratified_result.png)
 
 ### Group 5-Fold Results
 
-![Group 5-Fold Results](./group_result.png)
+![Group 5-Fold Results](group_result.png)
 
 ## Files
 
