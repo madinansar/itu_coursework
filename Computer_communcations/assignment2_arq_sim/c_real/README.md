@@ -86,7 +86,7 @@ The retransmission count remains of similar magnitude between baseline and optim
 
 ### Goodput Heatmap
 
-![Simulated Goodput Heatmap](goodput_heatmap.png)
+![Simulated Goodput Heatmap](/Users/madinaalzhanova/Desktop/itu_coursework/Computer_communcations/assignment2_arq_sim/goodput_heatmap.png)
 
 The heatmap shows the expected Selective Repeat trend:
 

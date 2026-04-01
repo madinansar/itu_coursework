@@ -1,4 +1,0 @@
-TimeSlice 3
-jobA 0 1 6
-jobB 2 2 9
-jobC 4 1 4

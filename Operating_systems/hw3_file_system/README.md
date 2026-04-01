@@ -25,3 +25,9 @@ Follow the format for command testing: <command> <path> [data]
         ls_fs
     - path is absolute path starting from /
     - data is used for write_fs, example: "lalala"
+
+    Demo screenshots:
+Erroneous rmdir:
+![Demo - Erroneous rmdir](./screenshots/errorneous_rm_dir.png)
+Terminal output:
+![Demo - Terminal output](./screenshots/terminal_output.png)
