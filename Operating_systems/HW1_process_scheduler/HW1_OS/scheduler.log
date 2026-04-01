@@ -1,0 +1,15 @@
+[2025-03-26 21:45:29] [INFO] Forking new process for jobA (PID: 89031)
+[2025-03-26 21:45:32] [INFO] Job jobA ran for 3 seconds. Sending SIGSTOP (PID: 89031)
+[2025-03-26 21:45:32] [INFO] Forking new process for jobB (PID: 89086)
+[2025-03-26 21:45:35] [INFO] Job jobB ran for 3 seconds. Sending SIGSTOP (PID: 89086)
+[2025-03-26 21:45:35] [INFO] Resuming job jobA (PID: 89031) - SIGCONT
+[2025-03-26 21:45:38] [INFO] Job jobA completed execution. Terminating (PID: 89031)
+[2025-03-26 21:45:38] [INFO] Forking new process for jobC (PID: 89141)
+[2025-03-26 21:45:41] [INFO] Job jobC ran for 3 seconds. Sending SIGSTOP (PID: 89141)
+[2025-03-26 21:45:41] [INFO] Resuming job jobB (PID: 89086) - SIGCONT
+[2025-03-26 21:45:44] [INFO] Job jobB ran for 3 seconds. Sending SIGSTOP (PID: 89086)
+[2025-03-26 21:45:44] [INFO] Resuming job jobC (PID: 89141) - SIGCONT
+[2025-03-26 21:45:47] [INFO] Job jobC completed execution. Terminating (PID: 89141)
+[2025-03-26 21:45:47] [INFO] Resuming job jobB (PID: 89086) - SIGCONT
+[2025-03-26 21:45:50] [INFO] Job jobB completed execution. Terminating (PID: 89086)
+[2025-03-26 21:45:50] [INFO] All jobs completed. Exiting scheduler.

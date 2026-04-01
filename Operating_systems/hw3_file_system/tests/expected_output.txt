@@ -1,0 +1,61 @@
+$ ./minifs mkfs disk.img
+Created filesystem in disk.img
+$ ./minifs mkdir_fs /docs
+Directory created.
+$ 
+$ ./minifs mkdir_fs /to_be_deleted
+Directory created.
+$ ./minifs ls_fs /to_be_deleted
+$ ./minifs ls_fs /
+ - docs (inode 1)
+ - to_be_deleted (inode 2)
+$ ./minifs rmdir_fs /docs/to_be_deleted
+Directory delete failed.
+$ ./minifs ls_fs /
+ - docs (inode 1)
+ - to_be_deleted (inode 2)
+$ 
+$ ./minifs mkdir_fs /docs/folder1
+Directory created.
+$ ./minifs ls_fs /
+ - docs (inode 1)
+ - to_be_deleted (inode 2)
+$ 
+$ ./minifs create_fs /docs/b.txt
+File created.
+$ ./minifs ls_fs /docs
+ - folder1 (inode 3)
+ - b.txt (inode 4)
+$ 
+$ ./minifs create_fs /docs/folder1/a.txt
+File created.
+$ ./minifs ls_fs /docs/folder1
+ - a.txt (inode 5)
+$ 
+$ ./minifs write_fs /docs/b.txt "Hello b.txt"
+Write successful.
+$ ./minifs write_fs /docs/folder1/a.txt "Hello a.txt"
+Write successful.
+$ ./minifs ls_fs /
+ - docs (inode 1)
+ - to_be_deleted (inode 2)
+$ ./minifs ls_fs /docs
+ - folder1 (inode 3)
+ - b.txt (inode 4)
+$ 
+$ ./minifs read_fs /docs/b.txt
+Read (11 bytes): Hello b.txt
+$ ./minifs read_fs /docs/folder1/a.txt
+Read (11 bytes): Hello a.txt
+$ 
+$ ./minifs delete_fs /docs/folder1/a.txt
+File deleted.
+$ ./minifs ls_fs /docs/folder1
+$ ./minifs ls_fs /docs
+ - folder1 (inode 3)
+ - b.txt (inode 4)
+$ ./minifs rmdir_fs /docs/folder1
+Directory deleted.
+$ ./minifs ls_fs /docs
+ - b.txt (inode 4)
+$ 

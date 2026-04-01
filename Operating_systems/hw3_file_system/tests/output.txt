@@ -1,0 +1,32 @@
+./minifs mkfs disk.img
+./minifs mkdir_fs /docs
+
+./minifs mkdir_fs /to_be_deleted
+./minifs ls_fs /to_be_deleted
+./minifs ls_fs /
+./minifs rmdir_fs /docs/to_be_deleted
+./minifs ls_fs /
+
+./minifs mkdir_fs /docs/folder1
+./minifs ls_fs /
+
+./minifs create_fs /docs/b.txt
+./minifs ls_fs /docs
+
+./minifs create_fs /docs/folder1/a.txt
+./minifs ls_fs /docs/folder1
+
+./minifs write_fs /docs/b.txt "Hello b.txt"
+./minifs write_fs /docs/folder1/a.txt "Hello a.txt"
+./minifs ls_fs /
+./minifs ls_fs /docs
+
+./minifs read_fs /docs/b.txt
+./minifs read_fs /docs/folder1/a.txt
+
+./minifs delete_fs /docs/folder1/a.txt
+./minifs ls_fs /docs/folder1
+./minifs ls_fs /docs
+./minifs rmdir_fs /docs/folder1
+./minifs ls_fs /docs
+

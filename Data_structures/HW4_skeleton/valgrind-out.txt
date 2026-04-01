@@ -1,0 +1,67 @@
+==13646== Memcheck, a memory error detector
+==13646== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==13646== Using Valgrind-3.23.0-c54d316124-20240426 and LibVEX; rerun with -h for copyright info
+==13646== Command: bin/main
+==13646== Parent PID: 13627
+==13646== 
+--13646-- 
+--13646-- Valgrind options:
+--13646--    --leak-check=full
+--13646--    --show-leak-kinds=all
+--13646--    --track-origins=yes
+--13646--    --verbose
+--13646--    --log-file=valgrind-out.txt
+--13646-- Contents of /proc/version:
+--13646--   Linux version 6.10.4-linuxkit (root@buildkitsandbox) (gcc (Alpine 13.2.1_git20240309) 13.2.1 20240309, GNU ld (GNU Binutils) 2.42) #1 SMP Mon Aug 12 08:47:01 UTC 2024
+--13646-- 
+--13646-- Arch and hwcaps: ARM64, LittleEndian, v8-fhm-dpbcvadp-sha3-rdm-atomics-fp16-vfp16
+--13646-- Page sizes: currently 4096, max supported 65536
+--13646-- Valgrind library directory: /usr/libexec/valgrind
+--13646-- Reading syms from /workspaces/ITU/4th semester/DataStructures/HW4_skeleton/bin/main
+--13646-- Reading syms from /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+--13646--   Considering /usr/lib/debug/.build-id/87/f56b6017f1c24ff66cafa216127c8b154799bd.debug ..
+--13646--   .. build-id is valid
+--13646-- Reading syms from /usr/libexec/valgrind/memcheck-arm64-linux
+--13646--    object doesn't have a dynamic symbol table
+--13646-- Scheduler: using generic scheduler lock implementation.
+--13646-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==13646== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-13646-by-???-on-b53f4323b387
+==13646== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-13646-by-???-on-b53f4323b387
+==13646== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-13646-by-???-on-b53f4323b387
+==13646== 
+==13646== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==13646== don't want to do, unless you know exactly what you're doing,
+==13646== or are doing some strange experiment):
+==13646==   /usr/bin/vgdb --pid=13646 ...command...
+==13646== 
+==13646== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==13646==   /path/to/gdb bin/main
+==13646== and then give GDB the following command
+==13646==   target remote | /usr/bin/vgdb --pid=13646
+==13646== --pid is optional if only one valgrind process is running
+==13646== 
+--13646-- REDIR: 0x401d280 (ld-linux-aarch64.so.1:strlen) redirected to 0x580c4a30 (???)
+--13646-- REDIR: 0x401c780 (ld-linux-aarch64.so.1:strcmp) redirected to 0x580c4a84 (???)
+--13646-- REDIR: 0x401c6c0 (ld-linux-aarch64.so.1:index) redirected to 0x580c4a58 (???)
+--13646-- Reading syms from /usr/libexec/valgrind/vgpreload_core-arm64-linux.so
+--13646-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-arm64-linux.so
+--13646-- Reading syms from /usr/lib/aarch64-linux-gnu/libc.so.6
+--13646--   Considering /usr/lib/debug/.build-id/5c/8f998f04145b99f2b808e5679fee4bb785e2a5.debug ..
+--13646--   .. build-id is valid
+--13646-- REDIR: 0x4959f20 (libc.so.6:memchr) redirected to 0x485078c (_vgnU_ifunc_wrapper)
+--13646-- REDIR: 0x495d920 (libc.so.6:strlen) redirected to 0x485078c (_vgnU_ifunc_wrapper)
+--13646-- REDIR: 0x495a160 (libc.so.6:memcpy) redirected to 0x485078c (_vgnU_ifunc_wrapper)
+--13646-- REDIR: 0x495dec0 (libc.so.6:rindex) redirected to 0x488dd20 (rindex)
+--13646-- REDIR: 0x4955c04 (libc.so.6:malloc) redirected to 0x4885400 (malloc)
+--13646-- REDIR: 0x4962f80 (libc.so.6:__GI_strlen) redirected to 0x488e6ec (__GI_strlen)
+--13646-- REDIR: 0x4961380 (libc.so.6:__GI_memcpy) redirected to 0x4890ad0 (__GI_memcpy)
+--13646-- REDIR: 0x495ba80 (libc.so.6:strchrnul) redirected to 0x4893a64 (strchrnul)
+--13646-- REDIR: 0x49564c4 (libc.so.6:free) redirected to 0x48884a0 (free)
+==13646== 
+==13646== HEAP SUMMARY:
+==13646==     in use at exit: 0 bytes in 0 blocks
+==13646==   total heap usage: 94 allocs, 94 frees, 2,688 bytes allocated
+==13646== 
+==13646== All heap blocks were freed -- no leaks are possible
+==13646== 
+==13646== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

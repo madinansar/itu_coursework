@@ -1,0 +1,42 @@
+[2025-05-11 21:56:17.884] [Thread 8168765504] Initial Stock:
+[2025-05-11 21:56:18.889] [Thread 6101970944] Customer 1 attempting to add product 1 (qty: 1) to cart | Stock: [
+ product 0: 5, product 1: 5, product 2: 5, ]
+[2025-05-11 21:56:18.890] [Thread 6101970944] Customer 1 successfully reserved product 1 (qty: 1) | Updated Stock: [
+ product 0: 5, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:18.890] [Thread 6101970944] Customer 1 attempting to acquire payment slot...
+[2025-05-11 21:56:18.890] [Thread 6101970944] Active customers [0]: 
+[2025-05-11 21:56:18.890] [Thread 6102544384] Customer 1 attempting to add product 0 (qty: 2) to cart | Stock: [
+ product 0: 5, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:18.890] [Thread 6102544384] Customer 1 successfully reserved product 0 (qty: 2) | Updated Stock: [
+ product 0: 3, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:18.890] [Thread 6103117824] Customer 2 attempting to add product 0 (qty: 1) to cart | Stock: [
+ product 0: 3, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:18.890] [Thread 6103117824] Customer 2 successfully reserved product 0 (qty: 1) | Updated Stock: [
+ product 0: 2, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:19.890] [Thread 6103691264] Customer 3 attempting to add product 0 (qty: 3) to cart | Stock: [
+ product 0: 2, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:19.890] [Thread 6103691264] Customer 3 failed to reserve product 0 (qty: 3) — only 2 available
+[2025-05-11 21:56:19.890] [Thread 6104264704] Customer 4 attempting to add product 0 (qty: 1) to cart | Stock: [
+ product 0: 2, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:19.892] [Thread 6104264704] Customer 4 successfully reserved product 0 (qty: 1) | Updated Stock: [
+ product 0: 1, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:19.892] [Thread 6104264704] Customer 4 attempting to acquire payment slot...
+[2025-05-11 21:56:19.893] [Thread 6104264704] Active customers [1]: 1 
+[2025-05-11 21:56:20.891] [Thread 6104838144] Customer 5 attempting to add product 2 (qty: 2) to cart | Stock: [
+ product 0: 1, product 1: 4, product 2: 5, ]
+[2025-05-11 21:56:20.892] [Thread 6104838144] Customer 5 successfully reserved product 2 (qty: 2) | Updated Stock: [
+ product 0: 1, product 1: 4, product 2: 3, ]
+[2025-05-11 21:56:20.892] [Thread 6104838144] Customer 5 attempting to acquire payment slot...
+[2025-05-11 21:56:20.892] [Thread 6104838144] Active customers [2]: 1 4 
+[2025-05-11 21:56:21.893] [Thread 6101970944] Customer 1 purchased product 1 (qty: 1) | Updated Stock: [ 
+ product 0: 1, product 1: 4, product 2: 3, ]
+[2025-05-11 21:56:21.893] [Thread 6104838144] Customer 5 attempting to acquire payment slot...
+[2025-05-11 21:56:21.894] [Thread 6104838144] Active customers [1]: 4 
+[2025-05-11 21:56:22.893] [Thread 6104264704] Customer 4 purchased product 0 (qty: 1) | Updated Stock: [ 
+ product 0: 1, product 1: 4, product 2: 3, ]
+[2025-05-11 21:56:24.895] [Thread 6104838144] Customer 5 purchased product 2 (qty: 2) | Updated Stock: [ 
+ product 0: 1, product 1: 4, product 2: 3, ]
+[2025-05-11 21:56:28.895] [Thread 6102544384] Customer will not buy. Customer 1 timeout expired. Product 0 (qty: 2) returned to stock | Updated Stock: [
+ product 0: 3, product 1: 4, product 2: 3, ]
+[2025-05-11 21:56:28.896] [Thread 6103117824] Customer will not buy. Customer 2 timeout expired. Product 0 (qty: 1) returned to stock | Updated Stock: [
+ product 0: 4, product 1: 4, product 2: 3, ]

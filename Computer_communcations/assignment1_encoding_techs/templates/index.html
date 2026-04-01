@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication System Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📡 Digital Communication System Simulator</h1>
+        
+        <div class="main-layout">
+            <!-- SENDER SECTION -->
+            <div class="panel sender-panel">
+                <h2>📤 Sender</h2>
+                
+                <div class="form-group">
+                    <label>Communication Mode:</label>
+                    <select id="mode">
+                        <option value="d2d">Digital to Digital (D2D)</option>
+                        <option value="d2a">Digital to Analog (D2A)</option>
+                        <option value="a2d">Analog to Digital (A2D)</option>
+                        <option value="a2a">Analog to Analog (A2A)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Encoding Scheme:</label>
+                    <select id="scheme">
+                        <option value="nrz-l">NRZ-L</option>
+                        <option value="nrz-i">NRZ-I</option>
+                        <option value="manchester">Manchester</option>
+                        <option value="ami">AMI</option>
+                    </select>
+                </div>
+
+                <!-- D2D/D2A Parameters -->
+                <div class="form-group" id="bits-group">
+                    <label>Input Bits:</label>
+                    <input type="text" id="bits" value="10110100" placeholder="e.g., 10110100">
+                </div>
+
+                <div class="form-group" id="samples-group">
+                    <label>Samples per Bit:</label>
+                    <input type="number" id="samples_per_bit" value="100" min="10" max="500">
+                </div>
+
+                <div class="form-group" id="amplitude-group">
+                    <label>Amplitude (A):</label>
+                    <input type="number" id="amplitude" value="1.0" step="0.1" min="0.1" max="10">
+                </div>
+
+                <div class="form-group" id="carrier-group" style="display: none;">
+                    <label>Carrier Frequency (Hz):</label>
+                    <input type="number" id="carrier_freq" value="10" step="1" min="1" max="100">
+                </div>
+
+                <!-- A2D Parameters -->
+                <div class="form-group" id="signal-freq-group" style="display: none;">
+                    <label>Signal Frequency (Hz):</label>
+                    <input type="number" id="signal_freq" value="5" step="0.5" min="0.5" max="50">
+                </div>
+
+                <div class="form-group" id="nbits-group" style="display: none;">
+                    <label>Quantization Bits:</label>
+                    <input type="number" id="n_bits" value="8" min="2" max="16">
+                </div>
+
+                <!-- A2A Parameters -->
+                <div class="form-group" id="message-freq-group" style="display: none;">
+                    <label>Message Frequency (Hz):</label>
+                    <input type="number" id="message_freq" value="5" step="0.5" min="0.5" max="50">
+                </div>
+
+                <div class="form-group" id="mod-index-group" style="display: none;">
+                    <label>Modulation Index (ka):</label>
+                    <input type="number" id="modulation_index" value="0.5" step="0.1" min="0.1" max="1">
+                </div>
+
+                <div class="form-group" id="duration-group" style="display: none;">
+                    <label>Duration (s):</label>
+                    <input type="number" id="duration" value="1.0" step="0.1" min="0.1" max="5">
+                </div>
+
+                <div class="form-group" id="sampling-rate-group" style="display: none;">
+                    <label>Sampling Rate (Hz):</label>
+                    <input type="number" id="sampling_rate" value="1000" min="100" max="10000">
+                </div>
+
+                <button id="encode-btn" class="btn btn-primary">Encode & Send</button>
+
+                <div id="sender-plot" class="plot-area"></div>
+                
+                <div class="info-box" id="sender-info"></div>
+            </div>
+
+            <!-- RECEIVER SECTION -->
+            <div class="panel receiver-panel">
+                <h2>📥 Receiver</h2>
+                
+                <div class="status-box">
+                    <p><strong>Status:</strong> <span id="receiver-status">Waiting for signal...</span></p>
+                </div>
+
+                <button id="decode-btn" class="btn btn-secondary" disabled>Decode Signal</button>
+
+                <div id="receiver-plot" class="plot-area"></div>
+
+                <div class="info-box" id="receiver-info"></div>
+                
+                <div class="result-box" id="decoded-result" style="display: none;">
+                    <h3>Decoded Output:</h3>
+                    <div class="decoded-bits"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
