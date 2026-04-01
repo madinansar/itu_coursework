@@ -2,6 +2,8 @@
 
 This folder contains a high-performance implementation of a Selective Repeat ARQ network simulation (written in C++17 for speed, with a C-style systems pipeline) over a Gilbert-Elliott burst-error channel.
 
+The implementation for this optimized version is in the `c_real` project folder.
+
 ## Aim of the Project
 
 The goal of the project is to study how protocol-level reliability mechanisms behave under realistic, bursty channel errors, and to improve throughput efficiency through implementation-level optimization.
